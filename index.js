@@ -45,3 +45,29 @@ fieldBtn.addEventListener('click', () => {
     createBoard(value);
 });
 
+const setPlayerPosition = () => {
+    const targetField = board.children[playerPosition];
+    const topPosition = targetField.offsetTop;
+    const leftPosition = targetField.offsetLeft;
+    player.style.top = topPosition + 18 + 'px';
+    player.style.left = leftPosition + 18 + 'px';
+}
+
+const getPrize = () => {
+    result.innerText = 'You got to the end'
+}
+
+const movePlayer = (value) => {
+    playerPosition = playerPosition + value;
+    if (playerPosition > boardSize) {
+        playerPosition = 1;
+        console.log(1)
+    }
+    if (playerPosition === boardSize) {
+        getPrize()
+        console.log('last')
+    }
+    setPlayerPosition()
+}
+
+
