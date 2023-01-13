@@ -1,0 +1,18 @@
+.field {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+#board {
+    position: relative;
+}
+
+#player {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+}
