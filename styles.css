@@ -10,6 +10,7 @@ body {
 header {
       text-align: center;
     padding: 60px;
+    max-width: 75%;
 }
 
 header h2 {
@@ -418,7 +419,7 @@ ol {
 
 header div {
     flex-direction: column;
-    flex-wrap: wrap;
+  align-items: center;
    
 }
 
