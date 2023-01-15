@@ -7,6 +7,58 @@ body {
   font-family: "Press Start 2P", cursive;
 }
 
+header {
+      text-align: center;
+    padding: 60px;
+}
+
+header h2 {
+      margin: 50px 0;
+}
+
+header div {
+      display: flex;
+    flex-direction: row;
+     justify-content: center;
+}
+
+header span {
+  background-image: url('img/mushroom-jump.gif');
+      display: inline-block;
+    width: 110px;
+    height: 105px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h1 {
+  font-size: 3rem;
+    padding: 10px;
+    color: #ffd19a;
+    text-shadow: black 1px 0 10px;
+}
+
+header p::after {
+    display: block;
+    content: "";
+    border-top: 0.3rem solid black;
+    width: 100%;
+    margin: 10vh auto;
+    transform: translateY(-1rem);
+}
+
+
+
+ol {
+    margin: 0 auto;
+    line-height: 40px;
+    max-width: 50%;
+}
+
+li {
+      margin: 50px auto;
+}
+
 
 .is-hidden {
     opacity: 0;
@@ -25,6 +77,11 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border: 6px solid black;
+       text-align: center;
+           display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .backdrop {
@@ -33,43 +90,31 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
 } 
 
 .modal h2 {
-      text-align: center;
-    position: relative;
-    top: 35px;
-    font-size: 2.5rem;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .modal button {
-    margin: 0 auto;
-    position: relative;
-    top: 90px;
     z-index: 1001;
+    margin: 40px auto 0;
 }
 
 .modal span {
   max-width: 75%;
     display: block;
-    position: relative;
-    top: 58px;
-    text-align: center;
-    left: 65px;
+        margin: 0 auto;
+
 }
 
 .mushrooms {
-      top: 55px;
-    position: relative;
-    left: 35px;
+  max-width: 80%;
 }
 
 .treasure {
-  width: 350px;
-  position: relative;
-  left: 100px;
+  max-width: 40%;
 }
 
 .game {
@@ -98,8 +143,10 @@ body {
   height: 20px;
   margin: -10px 5px 5px -10px;
   border-radius: 20px;
-  background-color: #ef233c;
-  box-shadow: inset 2px 2px #d90429;}
+  border: 1px solid black;
+  background-color: #ffd19a;
+  box-shadow: inset 2px 2px #ffd19a;
+}
 
 .dice-one {
   left: 50%;
@@ -196,30 +243,25 @@ top: 50%;
   }
 }
 
-header {
+main {
   text-align: center;
   padding: 15px;
-  max-width: 80%;
   margin: 0 auto;
+}
+
+main h2 {
+  margin-bottom: 50px;
 }
 
 button,
 input {
   display: block;
   margin: 60px auto;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Press Start 2P", cursive;
   padding: 15px;
   border: 2px solid black;
   background-color: #ffd19a;
-}
-
-
-.btn-disabled {
-        background-color: lightgrey;
-    color: darkgray;
-    border: 2px solid darkgray;
-    cursor: auto;
 }
 
 @keyframes blink-animation {
@@ -253,6 +295,18 @@ button {
 
 button:hover {
   box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, 0.2);
+  background-color: #f0b369;
+}
+
+.btn-disabled {
+        background-color: lightgrey;
+    color: darkgray;
+    border: 2px solid darkgray;
+    cursor: auto;
+}
+
+.btn-disabled:hover {
+  background-color: lightgrey;
 }
 
 .field {
@@ -299,7 +353,34 @@ button:hover {
     margin: 50px;
 }
 
-@media screen and (max-width: 1200px) {
+.swal-text {
+  text-align: center;
+}
+
+.swal-button {
+  background-color: #ffd19a;
+    border: 3px solid black;
+    border-radius: 0;
+
+}
+
+.swal-button:not([disabled]):hover {
+      box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, 0.2);
+    background-color: #f0b369
+}
+
+.swal-modal {
+  border-radius: 0;
+    border: 5px solid black;
+    background-color: lightgreen;
+}
+
+.swal-overlay {
+  
+    background-color: rgba(0,0,0,.7);
+}
+
+@media screen and (max-width: 700px) {
 
 .is-hidden {
     opacity: 0;
@@ -324,7 +405,22 @@ height: 609px;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
 }
+
+input::placeholder {
+  font-size: 0.4em;
+}
+
+ol {
+  max-width: 90%;
+}
+
+header div {
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+}
+
 
 }
