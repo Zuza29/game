@@ -42,7 +42,7 @@ const victory = () => {
     endImg.src = 'img/treasure.gif';
     endImg.classList.remove('mushrooms');
     endImg.classList.add('treasure');
-    endText.innerText = 'You found the treasure! Congratulations!';
+    endText.innerText = 'You found the treasure! Well done!';
     
 }
 
@@ -78,10 +78,10 @@ const roll = () => {
     side === 1 ? result.innerText = `You move by ${side} step. Roll again.` : result.innerText = `You move by ${side} steps. Roll again.`;
     movePlayer(side);
     board.style.marginTop = 12 + 'px';
-    for (let i = 1; i <= sides; i++) {
-        elDiceOne.classList.remove('show-' + i);
-        if (side === i) {
-            elDiceOne.classList.add('show-' + i);
+    for (let i = 0; i <= sides; i++) {
+        elDiceOne.classList.remove('side' + i);
+        if (side == i) {
+            elDiceOne.classList.add('side' + i);
         }
     };
 }
@@ -119,7 +119,9 @@ const createBoard = (fieldNum) => {
 fieldBtn.addEventListener('click', () => {
     let value = input.value;
     if (value < 5 || value > 50 || isNaN(value)) {
-        alert('Please enter a number between 5 and 50');
+        swal('Please enter a number between 5 and 50', {
+            button: 'Understood!',
+        });
         return;
     }
     createBoard(value);
