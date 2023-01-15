@@ -1,12 +1,75 @@
-html {
-  scroll-behavior: smooth;
-}
+
 
 body {
   background: linear-gradient(21deg, #c4f2c1, #54e64b);
   background-size: 400% 400%;
   animation: GradientBackground 5s ease infinite;
   font-family: "Press Start 2P", cursive;
+}
+
+
+.is-hidden {
+    opacity: 0;
+    visibility: none;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    background-color: lightgreen;
+    width: 528px;
+    height: 581px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 6px solid black;
+}
+
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+} 
+
+.modal h2 {
+      text-align: center;
+    position: relative;
+    top: 35px;
+    font-size: 2.5rem;
+    font-size: 2.5rem;
+}
+
+.modal button {
+    margin: 0 auto;
+    position: relative;
+    top: 90px;
+    z-index: 1001;
+}
+
+.modal span {
+  max-width: 75%;
+    display: block;
+    position: relative;
+    top: 58px;
+    text-align: center;
+    left: 65px;
+}
+
+.mushrooms {
+      top: 55px;
+    position: relative;
+    left: 35px;
+}
+
+.treasure {
+  width: 350px;
+  position: relative;
+  left: 100px;
 }
 
 .game {
@@ -156,6 +219,7 @@ input {
         background-color: lightgrey;
     color: darkgray;
     border: 2px solid darkgray;
+    cursor: auto;
 }
 
 @keyframes blink-animation {
@@ -184,6 +248,7 @@ input::placeholder {
 
 button {
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 button:hover {
@@ -197,6 +262,7 @@ button:hover {
   margin: 1px;
   display: inline-block;
   position: relative;
+  opacity: 0.8;
 }
 
 #board {
@@ -208,22 +274,57 @@ button:hover {
   position: relative;
 }
 
-.player {
-  position: absolute;
-  top: 38px;
-  left: 56px;
-  background-color: red;
-  width: 20px;
-  height: 20px;
+.pawn {
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    width: 75px;
+    height: 75px;
 }
 
 .fieldNumberText {
   position: absolute;
   top: 5px;
   left: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
 }
 
 #result {
         display: inline-block;
     margin: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+
+.is-hidden {
+    opacity: 0;
+    visibility: none;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 70%;
+height: 609px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 }
