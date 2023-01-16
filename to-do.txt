@@ -1,0 +1,5 @@
+TO DO LIST
+
+1. Fix the die roll
+2. Use SCSS instead of CSS 
+3. Clean up JS & HTML code
