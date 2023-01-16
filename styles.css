@@ -1,113 +1,111 @@
-
-
+* {
+  margin: 0;
+  padding: 0;
+}
+.container-main {
+  padding: 10px;
+  width: 100vh;
+  overflow: hidden;
+}
 body {
   background: linear-gradient(21deg, #c4f2c1, #54e64b);
   background-size: 400% 400%;
   animation: GradientBackground 5s ease infinite;
   font-family: "Press Start 2P", cursive;
-}
-
-header {
-      text-align: center;
-    padding: 60px;
-    max-width: 75%;
+  overflow-x: hidden;
 }
 
 header h2 {
-      margin: 50px 0;
+  margin: 50px 0;
 }
 
 header div {
-      display: flex;
-    flex-direction: row;
-     justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 header span {
-  background-image: url('img/mushroom-jump.gif');
-      display: inline-block;
-    width: 110px;
-    height: 105px;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url("img/mushroom-jump.gif");
+  display: inline-block;
+  width: 110px;
+  height: 105px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 h1 {
   font-size: 3rem;
-    padding: 10px;
-    color: #ffd19a;
-    text-shadow: black 1px 0 10px;
+  padding: 10px;
+  color: #ffd19a;
+  text-shadow: black 1px 0 10px;
 }
 
 header p::after {
-    display: block;
-    content: "";
-    border-top: 0.3rem solid black;
-    width: 100%;
-    margin: 10vh auto;
-    transform: translateY(-1rem);
+  display: block;
+  content: "";
+  border-top: 0.3rem solid black;
+  width: 100%;
+  margin: 10vh auto;
+  transform: translateY(-1rem);
 }
 
-
-
 ol {
-    margin: 0 auto;
-    line-height: 40px;
-    max-width: 50%;
+  margin: 0 auto;
+  line-height: 40px;
+  max-width: 50%;
 }
 
 li {
-      margin: 50px auto;
+  margin: 50px auto;
 }
 
-
 .is-hidden {
-    opacity: 0;
-    visibility: none;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1.25);
-    background-color: lightgreen;
-    width: 528px;
-    height: 581px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border: 6px solid black;
-       text-align: center;
-           display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: lightgreen;
+  width: 528px;
+  height: 581px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 2px 1px rgba(0, 0, 0, 0.2);
+  border: 6px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .backdrop {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-} 
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
 .modal h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .modal button {
-    z-index: 1001;
-    margin: 40px auto 0;
+  z-index: 1001;
+  margin: 40px auto 0;
 }
 
 .modal span {
   max-width: 75%;
-    display: block;
-        margin: 0 auto;
-
+  display: block;
+  margin: 0 auto;
 }
 
 .mushrooms {
@@ -121,14 +119,14 @@ li {
 .game {
   position: relative;
   width: auto;
-  height: 100%; 
+  height: 100%;
 }
 
 .container {
   position: relative;
-      right: 55px;
-    bottom: 55px;
-    height: 200px;
+  right: 55px;
+  bottom: 55px;
+  height: 200px;
 }
 
 .dice {
@@ -136,7 +134,8 @@ li {
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
-  transition: transform 1s; }
+  transition: transform 1s;
+}
 
 .dot {
   position: absolute;
@@ -151,13 +150,13 @@ li {
 
 .dice-one {
   left: 50%;
-top: 50%;
- }
+  top: 50%;
+}
 
 .side {
   position: absolute;
-  background-color: #ffF;
-  border-radius:5px;
+  background-color: #fff;
+  border-radius: 5px;
   width: 100px;
   height: 100px;
   border: 1px solid #e5e5e5;
@@ -166,73 +165,105 @@ top: 50%;
 }
 
 .side:nth-child(1) {
-  transform: translateZ(3.1em); }
+  transform: translateZ(3.1em);
+}
 
 .side:nth-child(6) {
-  transform: rotateY(90deg) translateZ(3.1em); }
+  transform: rotateY(90deg) translateZ(3.1em);
+}
 
 .side:nth-child(3) {
-  transform: rotateY(-90deg) translateZ(3.1em); }
+  transform: rotateY(-90deg) translateZ(3.1em);
+}
 
 .side:nth-child(4) {
-  transform: rotateX(90deg) translateZ(3.1em); }
+  transform: rotateX(90deg) translateZ(3.1em);
+}
 
 .side:nth-child(5) {
-  transform: rotateX(-90deg) translateZ(3.1em); }
+  transform: rotateX(-90deg) translateZ(3.1em);
+}
 
 .side:nth-child(2) {
-  transform: rotateY(-180deg) translateZ(3.1em); }
+  transform: rotateY(-180deg) translateZ(3.1em);
+}
 
-.two-1, .three-1, .four-1, .five-1, .six-1 {
+.two-1,
+.three-1,
+.four-1,
+.five-1,
+.six-1 {
   top: 20%;
-  left: 20%; }
+  left: 20%;
+}
 
-.four-3, .five-3, .six-4 {
+.four-3,
+.five-3,
+.six-4 {
   top: 20%;
-  left: 80%; }
+  left: 80%;
+}
 
-.one-1, .three-2, .five-5 {
+.one-1,
+.three-2,
+.five-5 {
   top: 50%;
-  left: 50%; }
+  left: 50%;
+}
 
-.four-2, .five-2, .six-3 {
+.four-2,
+.five-2,
+.six-3 {
   top: 80%;
-  left: 20%; }
+  left: 20%;
+}
 
-.two-2, .three-3, .four-4, .five-4, .six-6 {
+.two-2,
+.three-3,
+.four-4,
+.five-4,
+.six-6 {
   top: 80%;
-  left: 80%; }
+  left: 80%;
+}
 
 .six-2 {
   top: 50%;
-  left: 20%; }
+  left: 20%;
+}
 
 .six-5 {
   top: 50%;
-  left: 80%; 
+  left: 80%;
 }
 
 .show-1 {
-  transform: rotateX(720deg) rotateZ(-720deg); }
+  transform: rotateX(720deg) rotateZ(-720deg);
+}
 
 .show-6 {
-  transform: rotateX(-900deg) rotateZ(1080deg); }
+  transform: rotateX(-900deg) rotateZ(1080deg);
+}
 
 .show-3 {
-  transform: rotateY(-450deg) rotateZ(-1440deg); }
+  transform: rotateY(-450deg) rotateZ(-1440deg);
+}
 
 .show-4 {
-  transform: rotateY(810deg) rotateZ(720deg); }
+  transform: rotateY(810deg) rotateZ(720deg);
+}
 
 .show-5 {
-  transform: rotateX(-810deg) rotateZ(-1080deg); }
+  transform: rotateX(-810deg) rotateZ(-1080deg);
+}
 
 .show-2 {
-  transform: rotateX(450deg) rotateZ(-720deg); }
+  transform: rotateX(450deg) rotateZ(-720deg);
+}
 
 @keyframes GradientBackground {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 
   50% {
@@ -240,13 +271,13 @@ top: 50%;
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
-main {
+main,
+header {
   text-align: center;
-  padding: 15px;
   margin: 0 auto;
 }
 
@@ -281,7 +312,7 @@ input {
 }
 
 .blink {
-    animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
 
@@ -300,10 +331,10 @@ button:hover {
 }
 
 .btn-disabled {
-        background-color: lightgrey;
-    color: darkgray;
-    border: 2px solid darkgray;
-    cursor: auto;
+  background-color: lightgrey;
+  color: darkgray;
+  border: 2px solid darkgray;
+  cursor: auto;
 }
 
 .btn-disabled:hover {
@@ -330,11 +361,11 @@ button:hover {
 }
 
 .pawn {
-    position: absolute;
-    top: 70px;
-    left: 120px;
-    width: 75px;
-    height: 75px;
+  position: absolute;
+  top: 70px;
+  left: 120px;
+  width: 75px;
+  height: 75px;
 }
 
 .fieldNumberText {
@@ -350,8 +381,8 @@ button:hover {
 }
 
 #result {
-        display: inline-block;
-    margin: 50px;
+  display: inline-block;
+  margin: 50px;
 }
 
 .swal-text {
@@ -360,68 +391,62 @@ button:hover {
 
 .swal-button {
   background-color: #ffd19a;
-    border: 3px solid black;
-    border-radius: 0;
-
+  border: 3px solid black;
+  border-radius: 0;
 }
 
 .swal-button:not([disabled]):hover {
-      box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, 0.2);
-    background-color: #f0b369
+  box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, 0.2);
+  background-color: #f0b369;
 }
 
 .swal-modal {
   border-radius: 0;
-    border: 5px solid black;
-    background-color: lightgreen;
+  border: 5px solid black;
+  background-color: lightgreen;
 }
 
 .swal-overlay {
-  
-    background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-width: 700px) {
-
-.is-hidden {
+  .is-hidden {
     opacity: 0;
     visibility: none;
     pointer-events: none;
-}
+  }
 
-.modal {
+  .modal {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(1.25);
     width: 70%;
-height: 609px;
+    height: 609px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 
-.backdrop {
+  .backdrop {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-}
+  }
 
-input::placeholder {
-  font-size: 0.4em;
-}
+  input::placeholder {
+    font-size: 0.4em;
+  }
 
-ol {
-  max-width: 90%;
-}
+  ol {
+    max-width: 90%;
+  }
 
-header div {
+  header div {
     flex-direction: column;
-  align-items: center;
-   
-}
-
-
+    align-items: center;
+  }
 }
