@@ -1,0 +1,29 @@
+body {
+  background: linear-gradient(21deg, #c4f2c1, #54e64b);
+  background-size: 400% 400%;
+  animation: GradientBackground 5s ease infinite;
+  font-family: "Press Start 2P", cursive;
+}
+
+.container {
+  padding: 10px;
+  max-width: 100vh;
+  text-align: center;
+  margin: 0 auto;
+}
+
+ol {
+  margin: 0 auto;
+  line-height: 40px;
+  max-width: 50%;
+}
+
+li {
+  margin: 50px auto;
+}
+
+.game {
+  position: relative;
+  max-width: 100%;
+}
+

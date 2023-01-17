@@ -77,17 +77,9 @@ const roll = () => {
     const side = Math.floor(Math.random() * sides + 1);
     side === 1 ? result.innerText = `You move by ${side} step. Roll again.` : result.innerText = `You move by ${side} steps. Roll again.`;
     movePlayer(side);
-    board.style.marginTop = 12 + 'px';
-    for (let i = 0; i <= sides; i++) {
-        elDiceOne.classList.remove('side' + i);
-        if (side == i) {
-            elDiceOne.classList.add('side' + i);
-        }
-    };
 }
 
 const input = document.getElementById('input');
-fieldBtn.classList.toggle('blink')
 
 // Create the game board
 const createBoard = (fieldNum) => {
@@ -109,9 +101,7 @@ const createBoard = (fieldNum) => {
     board.appendChild(player)
     rollBtn.addEventListener('click', roll);
     rollBtn.classList.toggle('btn-disabled');
-    fieldBtn.classList.toggle('blink');
     fieldBtn.classList.toggle('btn-disabled')
-    rollBtn.classList.toggle('blink');
     pawn.style.display = 'block';
 }
 
@@ -146,7 +136,6 @@ const movePlayer = (value) => {
     };
     if (playerPosition + 1 == boardSize) {
         setTimeout(victory, 2000);
-        rollBtn.classList.toggle('blink');
     };
     setPlayerPosition();
 };

@@ -1,0 +1,43 @@
+.field {
+  border: 1px solid black;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 1px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.8;
+}
+
+#board {
+  max-width: 70%;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.pawn {
+  position: absolute;
+  top: 70px;
+  left: 120px;
+  width: 75px;
+  height: 75px;
+}
+
+.fieldNumberText {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+#result {
+  display: inline-block;
+  margin: 50px;
+}

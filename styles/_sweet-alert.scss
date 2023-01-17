@@ -1,0 +1,23 @@
+.swal-text {
+  text-align: center;
+}
+
+.swal-button {
+  background-color: #ffd19a;
+  border: 3px solid black;
+  border-radius: 0;
+  &:not([disabled]):hover {
+    box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, 0.2);
+    background-color: #f0b369;
+  }
+}
+
+.swal-modal {
+  border-radius: 0;
+  border: 5px solid black;
+  background-color: lightgreen;
+}
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}

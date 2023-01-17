@@ -1,0 +1,34 @@
+header {
+  &h2 {
+    margin: 50px 0;
+  }
+  &p::after {
+    display: block;
+    content: "";
+    border-top: 0.3rem solid black;
+    max-width: 100%;
+    margin: 10vh auto;
+    transform: translateY(-1rem);
+  }
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mushroom-container {
+  background-image: url("/img/mushroom-jump.gif");
+  display: inline-block;
+  width: 110px;
+  height: 105px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+h1 {
+  font-size: 3rem;
+  padding: 10px;
+  color: #ffd19a;
+  text-shadow: black 1px 0 10px;
+}
