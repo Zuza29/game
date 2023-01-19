@@ -17,8 +17,6 @@ body {
 }
 
 .container {
-  padding: 10px;
-  max-width: 100vh;
   text-align: center;
   margin: 0 auto;
 }
@@ -185,14 +183,10 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.generate-heading {
-  margin-bottom: 50px;
-}
-
 .field {
   border: 1px solid black;
-  max-width: 200px;
-  max-height: 200px;
+  width: 200px;
+  height: 200px;
   margin: 1px;
   display: inline-block;
   position: relative;
@@ -231,6 +225,21 @@ button:hover {
 #result {
   display: inline-block;
   margin: 50px;
+}
+
+.sticky-roll {
+  position: sticky;
+  z-index: 1002;
+  top: -1px;
+}
+.sticky-roll.stuck {
+  background-color: darkgreen;
+  color: white;
+  border: 1px solid darkgreen;
+}
+
+.generate-heading {
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 700px) {
