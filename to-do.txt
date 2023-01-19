@@ -1,5 +1,0 @@
-TO DO LIST
-
-2. Use SCSS instead of CSS 
-3. Clean up JS & HTML code
-4. Sticky roll header
