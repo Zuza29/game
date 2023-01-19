@@ -6,6 +6,14 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
+const el = document.querySelector(".sticky-roll")
+const observer = new IntersectionObserver(
+    ([e]) => e.target.classList.toggle("stuck", e.intersectionRatio < 1),
+    { threshold: [1] }
+);
+
+observer.observe(el);
+
 const section = document.querySelector('section'),
     overlay = document.querySelector('.overlay'),
     showBtn = document.querySelector('.show-modal'),
