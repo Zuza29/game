@@ -61,6 +61,7 @@ headerp::after {
   height: 105px;
   background-repeat: no-repeat;
   background-size: contain;
+  margin: auto;
 }
 
 h1 {
@@ -85,6 +86,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 .modalh2 {
   font-size: 1.5rem;
@@ -125,7 +127,7 @@ h1 {
 button,
 input {
   display: block;
-  margin: 60px auto;
+  margin: 30px auto;
   font-size: 1.5rem;
   font-family: "Press Start 2P", cursive;
   padding: 15px;
@@ -224,18 +226,15 @@ button:hover {
 
 #result {
   display: inline-block;
-  margin: 50px;
 }
 
 .sticky-roll {
   position: sticky;
-  z-index: 1002;
+  z-index: 1;
   top: -1px;
-}
-.sticky-roll.stuck {
-  background-color: darkgreen;
-  color: white;
-  border: 1px solid darkgreen;
+  margin-top: 100px;
+  background-color: #61bf13;
+  padding: 15px;
 }
 
 .generate-heading {
