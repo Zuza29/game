@@ -1,78 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="container">
+      <header>
+        <h2>welcome to the</h2>
+        <section class="heading-container">
+          <span class="mushroom-container"></span>
+          <h1>Treasure Hunt</h1>
+          <span class="mushroom-container"></span>
+        </section>
 
-</head>
-<body>
-  <section class="container">
-  <header>
-    <h2>welcome to the</h2>
-    <div class="heading-container">
-      <span class="mushroom-container"></span>
-       <h1>Treasure Hunt</h1>
-       <span class="mushroom-container"></span>
-    </div>
-   
-    <h2>rules</h2>
-    <ol>
-      <li>Type in a number between 5 and 50 to generate your gameboard (your number will be the number of generated fields)</li>
-      <li>Roll the die - your pawn will move automatically by the number of steps you rolled</li>
-      <li>If you step on a forest field, you can continue forward</li>
-      <li>Watch out! If you step on the dark forest field, the game is over!</li>
-      <li>To find the treasure, you have to step on the treasure field, which is always the last field of the board</li>
-      <li>If you approach the end of the board and roll a number that exceeds the number of fields left, you will be transported back to field number one</li>
-      
-    </ol>
-    <p>Good luck!</p>
-  </header>
+        <h2>rules</h2>
+        <ol>
+          <li>
+            Type in a number between 5 and 50 to generate your gameboard (your
+            number will be the number of generated fields)
+          </li>
+          <li>
+            Roll the die - your pawn will move automatically by the number of
+            steps you rolled
+          </li>
+          <li>If you step on a forest field, you can continue forward</li>
+          <li>
+            Watch out! If you step on the dark forest field, the game is over!
+          </li>
+          <li>
+            To find the treasure, you have to step on the treasure field, which
+            is always the last field of the board
+          </li>
+          <li>
+            If you approach the end of the board and roll a number that exceeds
+            the number of fields left, you will be transported back to field
+            number one
+          </li>
+        </ol>
+        <p>Good luck!</p>
+      </header>
 
-    <main>
+      <main>
         <h2 class="generate-heading">Generate the gameboard</h2>
-        <span>Please enter a number between 5 and 50 to generate the gameboard.</span>
-        <input id="input" placeholder="Insert the number here...">
+        <span
+          >Please enter a number between 5 and 50 to generate the
+          gameboard.</span
+        >
+        <input id="input" placeholder="Insert the number here..." />
         <button type="button" id="field-btn">Generate</button>
-        <h2>Die</h2>
-        <button  type="button" id="die-btn">Roll the die</button>
-      <section class="game">
-          <svg version="1.1" class="pawn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" fill="#000000" viewBox="0 0 780 540">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <path style="fill:#ffffff;" d="M248.082,0.003C111.07,0.003,0,111.063,0,248.085c0,137.001,111.07,248.07,248.082,248.07 c137.006,0,248.076-111.069,248.076-248.07C496.158,111.062,385.088,0.003,248.082,0.003z"/> <path style="fill:#000000;" d="M347.38,358.029c-0.513-1.467-12.53-34.956-38.836-38.672l-3.199-24 c-0.079-0.579-0.322-1.124-0.702-1.568l-20.479-23.891l-6.622-62.925c6.09-0.989,19.749-4.118,27.128-12.972 c0.353-0.424,0.583-0.934,0.665-1.478c0.073-0.469,0.61-4.703-2.751-8.795c-2.751-3.353-7.212-5.523-13.296-6.482 c6.139-9.493,19.244-32.962,15.604-55.525c-4.751-29.456-24.751-45.796-56.325-46.033c-0.09-0.008-0.178-0.012-0.268-0.012h-0.438 c-0.091,0-0.179,0.003-0.267,0.012c-31.572,0.234-51.571,16.575-56.328,46.033c-3.637,22.563,9.469,46.032,15.609,55.525 c-6.086,0.959-10.548,3.13-13.301,6.482c-3.358,4.094-2.821,8.326-2.749,8.795c0.084,0.544,0.313,1.054,0.666,1.477 c7.377,8.855,21.036,11.984,27.128,12.973l-6.624,62.925l-20.478,23.891c-0.38,0.444-0.624,0.989-0.702,1.568l-3.199,24 c-26.308,3.716-38.325,37.205-38.838,38.672c-0.113,0.321-0.17,0.66-0.17,1v26.361c0,0.49,0.119,0.973,0.346,1.407 c14.177,27.001,52.196,33.686,99.125,33.686c46.928,0,84.95-6.686,99.124-33.686c0.228-0.434,0.347-0.917,0.347-1.407v-26.361 C347.55,358.688,347.492,358.35,347.38,358.029z"/> <path style="fill:#000000;" d="M347.38,358.029c-0.513-1.467-12.53-34.956-38.836-38.672l-3.199-24 c-0.079-0.579-0.322-1.124-0.702-1.568l-20.479-23.891c0,0-7.315,7.122-36.371,7.122c-29.057,0-35.797-7.122-35.797-7.122 l-20.478,23.891c-0.38,0.444-0.624,0.989-0.702,1.568l-3.199,24c-26.308,3.716-38.325,37.205-38.838,38.672 c-0.113,0.321-0.17,0.66-0.17,1v26.361c0,0.49,0.119,0.973,0.346,1.407c14.177,27.001,52.196,33.686,99.125,33.686 c46.928,0,84.95-6.686,99.124-33.686c0.228-0.434,0.347-0.917,0.347-1.407v-26.361C347.55,358.688,347.492,358.35,347.38,358.029z"/> <path style="fill:#000000;" d="M347.38,358.029c-0.513-1.467-12.53-34.956-38.836-38.672l-3.199-24 c-0.079-0.579-0.322-1.124-0.702-1.568c0,0-14.469,8.655-55.03,8.655s-58.095-8.655-58.095-8.655 c-0.38,0.444-0.624,0.989-0.702,1.568l-3.199,24c-26.308,3.716-38.325,37.205-38.838,38.672c-0.113,0.321-0.17,0.66-0.17,1v26.361 c0,0.49,0.119,0.973,0.346,1.407c14.177,27.001,52.196,33.686,99.125,33.686c46.928,0,84.95-6.686,99.124-33.686 c0.228-0.434,0.347-0.917,0.347-1.407v-26.361C347.55,358.688,347.492,358.35,347.38,358.029z"/> <path style="fill:#000000;" d="M347.38,358.029c-0.513-1.467-12.53-34.956-38.836-38.672c0,0-11.714,13.958-58.327,13.958 c-46.615,0-62.601-13.958-62.601-13.958c-26.308,3.716-38.325,37.205-38.838,38.672c-0.113,0.321-0.17,0.66-0.17,1v26.361 c0,0.49,0.119,0.973,0.346,1.407c14.177,27.001,52.196,33.686,99.125,33.686c46.928,0,84.95-6.686,99.124-33.686 c0.228-0.434,0.347-0.917,0.347-1.407v-26.361C347.55,358.688,347.492,358.35,347.38,358.029z"/> <path style="fill:#000000;" d="M347.38,358.029c-0.165-0.47-40.81,20.081-99.255,20.081c-58.446,0-99.121-20.726-99.347-20.081 c-0.113,0.321-0.17,0.66-0.17,1v26.361c0,0.49,0.119,0.973,0.346,1.407c14.177,27.001,52.196,33.686,99.125,33.686 c46.928,0,84.95-6.686,99.124-33.686c0.228-0.434,0.347-0.917,0.347-1.407v-26.361C347.55,358.688,347.492,358.35,347.38,358.029z"/> <path style="fill:#000000;" d="M282.201,95.715c-19.227-19.228-50.4-19.228-69.627,0c-19.228,19.227-19.228,50.399,0,69.627 S301.431,114.942,282.201,95.715z"/> </g>
-</svg>
+
+        <section class="game">
+          <svg
+            version="1.1"
+            class="pawn"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xml:space="preserve"
+            fill="#000000"
+            viewBox="0 0 780 540"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <g id="SVGRepo_iconCarrier">
+              <path
+                style="fill: #ffffff"
+                d="M248.082,0.003C111.07,0.003,0,111.063,0,248.085c0,137.001,111.07,248.07,248.082,248.07 c137.006,0,248.076-111.069,248.076-248.07C496.158,111.062,385.088,0.003,248.082,0.003z"
+              />
+              <path
+                style="fill: #000000"
+                d="M347.38,358.029c-0.513-1.467-12.53-34.956-38.836-38.672l-3.199-24 c-0.079-0.579-0.322-1.124-0.702-1.568l-20.479-23.891l-6.622-62.925c6.09-0.989,19.749-4.118,27.128-12.972 c0.353-0.424,0.583-0.934,0.665-1.478c0.073-0.469,0.61-4.703-2.751-8.795c-2.751-3.353-7.212-5.523-13.296-6.482 c6.139-9.493,19.244-32.962,15.604-55.525c-4.751-29.456-24.751-45.796-56.325-46.033c-0.09-0.008-0.178-0.012-0.268-0.012h-0.438 c-0.091,0-0.179,0.003-0.267,0.012c-31.572,0.234-51.571,16.575-56.328,46.033c-3.637,22.563,9.469,46.032,15.609,55.525 c-6.086,0.959-10.548,3.13-13.301,6.482c-3.358,4.094-2.821,8.326-2.749,8.795c0.084,0.544,0.313,1.054,0.666,1.477 c7.377,8.855,21.036,11.984,27.128,12.973l-6.624,62.925l-20.478,23.891c-0.38,0.444-0.624,0.989-0.702,1.568l-3.199,24 c-26.308,3.716-38.325,37.205-38.838,38.672c-0.113,0.321-0.17,0.66-0.17,1v26.361c0,0.49,0.119,0.973,0.346,1.407 c14.177,27.001,52.196,33.686,99.125,33.686c46.928,0,84.95-6.686,99.124-33.686c0.228-0.434,0.347-0.917,0.347-1.407v-26.361 C347.55,358.688,347.492,358.35,347.38,358.029z"
+              />
+              <path
+                style="fill: #000000"
+                d="M347.38,358.029c-0.513-1.467-12.53-34.956-38.836-38.672l-3.199-24 c-0.079-0.579-0.322-1.124-0.702-1.568l-20.479-23.891c0,0-7.315,7.122-36.371,7.122c-29.057,0-35.797-7.122-35.797-7.122 l-20.478,23.891c-0.38,0.444-0.624,0.989-0.702,1.568l-3.199,24c-26.308,3.716-38.325,37.205-38.838,38.672 c-0.113,0.321-0.17,0.66-0.17,1v26.361c0,0.49,0.119,0.973,0.346,1.407c14.177,27.001,52.196,33.686,99.125,33.686 c46.928,0,84.95-6.686,99.124-33.686c0.228-0.434,0.347-0.917,0.347-1.407v-26.361C347.55,358.688,347.492,358.35,347.38,358.029z"
+              />
+              <path
+                style="fill: #000000"
+                d="M347.38,358.029c-0.513-1.467-12.53-34.956-38.836-38.672l-3.199-24 c-0.079-0.579-0.322-1.124-0.702-1.568c0,0-14.469,8.655-55.03,8.655s-58.095-8.655-58.095-8.655 c-0.38,0.444-0.624,0.989-0.702,1.568l-3.199,24c-26.308,3.716-38.325,37.205-38.838,38.672c-0.113,0.321-0.17,0.66-0.17,1v26.361 c0,0.49,0.119,0.973,0.346,1.407c14.177,27.001,52.196,33.686,99.125,33.686c46.928,0,84.95-6.686,99.124-33.686 c0.228-0.434,0.347-0.917,0.347-1.407v-26.361C347.55,358.688,347.492,358.35,347.38,358.029z"
+              />
+              <path
+                style="fill: #000000"
+                d="M347.38,358.029c-0.513-1.467-12.53-34.956-38.836-38.672c0,0-11.714,13.958-58.327,13.958 c-46.615,0-62.601-13.958-62.601-13.958c-26.308,3.716-38.325,37.205-38.838,38.672c-0.113,0.321-0.17,0.66-0.17,1v26.361 c0,0.49,0.119,0.973,0.346,1.407c14.177,27.001,52.196,33.686,99.125,33.686c46.928,0,84.95-6.686,99.124-33.686 c0.228-0.434,0.347-0.917,0.347-1.407v-26.361C347.55,358.688,347.492,358.35,347.38,358.029z"
+              />
+              <path
+                style="fill: #000000"
+                d="M347.38,358.029c-0.165-0.47-40.81,20.081-99.255,20.081c-58.446,0-99.121-20.726-99.347-20.081 c-0.113,0.321-0.17,0.66-0.17,1v26.361c0,0.49,0.119,0.973,0.346,1.407c14.177,27.001,52.196,33.686,99.125,33.686 c46.928,0,84.95-6.686,99.124-33.686c0.228-0.434,0.347-0.917,0.347-1.407v-26.361C347.55,358.688,347.492,358.35,347.38,358.029z"
+              />
+              <path
+                style="fill: #000000"
+                d="M282.201,95.715c-19.227-19.228-50.4-19.228-69.627,0c-19.228,19.227-19.228,50.399,0,69.627 S301.431,114.942,282.201,95.715z"
+              />
+            </g>
+          </svg>
+          
+        </section>
+      </main>
+
+      <section class="sticky-roll">
+          <h2>Die</h2>
+          <button type="button" id="die-btn">Roll the die</button>
+
+          <h2>Roll result:</h2>
+          <span id="result"></span>
       </section>
-  
 
-        <h2>Roll result:</h2>
-        <span id="result"></span>
-</main>
+      <section id="board"></section>
 
-    <section id="board">
-  
+      <footer>
+
+      <button id="reset-btn" type="button">Reset</button>
+</footer>
+      <section class="backdrop is-hidden">
+        <article class="modal">
+          <h2 class="blink end-heading"></h2>
+          <span id="end-text"></span>
+          <button type="button" id="try-again-btn">Try again!</button>
+          <img
+            class="end-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+            alt="End game animated picture"
+          />
+        </article>
+      </section>
     </section>
-
-
-    <button id="reset-btn" type="button">Reset</button>
-
-       <section class="backdrop is-hidden">
-      <article class="modal">
-        <h2 class="blink end-heading"></h2>
-        <span id="end-text"></span>
-<button type="button" id="try-again-btn">Try again!</button>
-     <img class="end-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png" alt="End game animated picture">
-      </article>
-    </section>
-</section>
     <script src="index.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-</body>
+  </body>
 </html>
